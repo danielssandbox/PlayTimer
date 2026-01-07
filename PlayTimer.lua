@@ -1,6 +1,7 @@
 -- Define the addon namespace
 local PlayTimerAddon = {}
 local Logger = PrintHelper:New("PlayTimer", {255, 255, 0})
+local IS_DEBUG = false
 
 
 -- Create a small timer frame for displaying remaining time
@@ -181,19 +182,21 @@ SlashCmdList["PLAYTIMER"] = function(input)
     end
 
 
-    -- Debug outputs
-    if args[1] ~= nil then
+    -- <Debug arguments>
+    if IS_DEBUG then
+        if args[1] ~= nil then
         print(args[1])
-    else 
-        print("arg1 was nil")
-    end
+        else 
+            print("arg1 was nil")
+        end
 
-    if args[2] ~= nil then
-        print(args[2])
-    else 
-        print("arg2 was nil")
+        if args[2] ~= nil then
+            print(args[2])
+        else 
+            print("arg2 was nil")
+        end
     end
-    -- /Debug outputs
+    -- </Debug arguments>
 
     local commandVerb = args[1]
     if not commandVerb then
@@ -371,7 +374,7 @@ SlashCmdList["PLAYTIMER"] = function(input)
     elseif commandVerb == "help" then
         HelperFunc.ShowHelp()
     elseif commandVerb == "alert" then
-        print("ALERT")
+        --print("ALERT")
     elseif commandVerb == "reset-timer" then
         if isCharacterMode then
             PTACharSavedVars.totalTime = 36000
