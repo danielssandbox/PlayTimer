@@ -5,6 +5,7 @@
 ## Version: 0.1
 ## SavedVariables: PTASavedVars
 ## SavedVariablesPerCharacter: PTACharSavedVars
+Compat.lua
 PrintHelper.lua
 HelperFunctions.lua
 PlayTimer.lua
