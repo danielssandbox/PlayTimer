@@ -1,10 +1,11 @@
-## Interface: 30300, 40400
+## Interface: 30300 
 ## Title: PlayTimer
 ## Notes: Addon to help keep track of the time spent playing.
 ## Author: Daniel's Sandbox
 ## Version: 0.1
 ## SavedVariables: PTASavedVars
 ## SavedVariablesPerCharacter: PTACharSavedVars
+Compat.lua
 PrintHelper.lua
 HelperFunctions.lua
 PlayTimer.lua
